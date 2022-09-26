@@ -6,6 +6,7 @@
 .sso-login-section .sso-login-button {
   width: 250px;
   margin: 0 0 20px;
+  border: none;
 }
 .sso-login-section .sso-login-button::before,
 .sso-login-section .sso-login-button::after {
