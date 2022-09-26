@@ -1,4 +1,3 @@
-var fbApiInit = false;
 
 function statusChangeCallback(response) {
   console.log(response);
@@ -18,13 +17,9 @@ function testAPI() {
   });
 }
 
-function checkLoginState(isClicked = false) {
+function checkLoginState() {
   FB.getLoginStatus(function(response) {
-    if (isClicked) {
-      statusChangeCallback(response);
-    } else {
-      this.fbApiInit = true;
-    }
+    statusChangeCallback(response);
   });
 }
 
@@ -35,8 +30,6 @@ window.fbAsyncInit = function() {
     xfbml: true,
     version: 'v15.0'
   });
-
-  checkLoginState();
 }
 
 (function() {
@@ -49,6 +42,6 @@ window.fbAsyncInit = function() {
 document.addEventListener('DOMContentLoaded', () => {
   const buttonFB = document.getElementsByClassName('sso-login-facebook')[0];
   buttonFB.addEventListener('click', () => {
-    checkLoginState(true);
+    checkLoginState();
   });
 });
