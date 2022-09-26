@@ -34,7 +34,7 @@ window.fbAsyncInit = function() {
 
 (function() {
   var e = document.createElement('script');
-  e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+  e.src = document.location.protocol + '//connect.facebook.net/en_US/sdk.js';
   e.async = true;
   document.getElementById('fb-root').appendChild(e);
 }());
