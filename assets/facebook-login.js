@@ -5,6 +5,7 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     testAPI();
   } else {
+    console.log(123123, fbApiInit);
     if (fbApiInit) {
       FB.login(function(response) {
         console.log(response);
