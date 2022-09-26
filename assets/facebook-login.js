@@ -27,6 +27,7 @@ function checkLoginState(isClicked = false) {
       statusChangeCallback(response);
     } else {
       fbApiInit = true;
+      console.log(111, fbApiInit);
     }
   });
 }
