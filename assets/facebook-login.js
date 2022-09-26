@@ -5,12 +5,9 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     testAPI();
   } else {
-    console.log(123123, fbApiInit);
-    if (fbApiInit) {
-      FB.login(function(response) {
-        console.log(response);
-      }, {scope: 'public_profile,email'});
-    }
+    FB.login(function(response) {
+      console.log(response);
+    }, {scope: 'public_profile,email'});
   }
 }
 
@@ -27,7 +24,6 @@ function checkLoginState(isClicked = false) {
       statusChangeCallback(response);
     } else {
       this.fbApiInit = true;
-      console.log(111, this.fbApiInit);
     }
   });
 }
@@ -39,6 +35,8 @@ window.fbAsyncInit = function() {
     xfbml: true,
     version: 'v15.0'
   });
+
+  console.log(123123123123);
 
   checkLoginState();
 }
