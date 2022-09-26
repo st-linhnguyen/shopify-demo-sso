@@ -36,10 +36,15 @@ window.fbAsyncInit = function() {
     version: 'v15.0'
   });
 
-  console.log(123123123123);
-
   checkLoginState();
 }
+
+(function() {
+  var e = document.createElement('script');
+  e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+  e.async = true;
+  document.getElementById('fb-root').appendChild(e);
+}());
 
 document.addEventListener('DOMContentLoaded', () => {
   const buttonFB = document.getElementsByClassName('sso-login-facebook')[0];
