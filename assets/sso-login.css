@@ -7,6 +7,15 @@
   width: 250px;
   margin: 0 0 20px;
 }
+
+.sso-login-section .sso-login-button.sso-login-facebook {
+  background-color: #3b5998;
+}
+
+.sso-login-section .sso-login-button.sso-login-line {
+  background-color: #00c300;
+}
+
 .sso-login-button svg {
   width: 18px;
   margin-right: 10px;
