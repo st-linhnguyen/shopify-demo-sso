@@ -1,8 +1,9 @@
 .sso-login-section {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
-.sso-login-button {
+.sso-login-section .sso-login-button {
   width: 250px;
   margin: 0 0 20px;
 }
