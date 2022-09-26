@@ -1,11 +1,15 @@
+var fbApiInit = false;
+
 function statusChangeCallback(response) {
   console.log(response);
   if (response.status === 'connected') {
     testAPI();
   } else {
-    FB.login(function(response) {
-      console.log(response);
-    }, {scope: 'public_profile,email'});
+    if (fbApiInit) {
+      FB.login(function(response) {
+        console.log(response);
+      }, {scope: 'public_profile,email'});
+    }
   }
 }
 
@@ -16,9 +20,13 @@ function testAPI() {
   });
 }
 
-function checkLoginState() {
+function checkLoginState(isClicked = false) {
   FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
+    if (isClicked) {
+      statusChangeCallback(response);
+    } else {
+      fbApiInit = true;
+    }
   });
 }
 
@@ -29,6 +37,8 @@ window.fbAsyncInit = function() {
     xfbml: true,
     version: 'v15.0'
   });
+
+  checkLoginState();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
