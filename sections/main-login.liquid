@@ -69,6 +69,17 @@
   <h1 id="login" tabindex="-1">
     {{ 'customer.login_page.title' | t }}
   </h1>
+  <div class="sso-login-section">
+    <button class="sso-login-button">
+      {%- liquid
+        render 'icon-facebook'
+      -%}
+      Login with Facebook
+    </button>
+    <button class="sso-login-button">
+      Login with Line
+    </button>
+  </div>
   <div>
     {%- if recover_success == true -%}
       <h3 class="form__message" tabindex="-1" autofocus>
