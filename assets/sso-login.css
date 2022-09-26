@@ -1,4 +1,12 @@
+.sso-login-section {
+  display: flex;
+  flex-direction: column;
+}
+.sso-login-button {
+  width: 250px;
+  margin: 0 0 20px;
+}
 .sso-login-button svg {
   width: 18px;
-  margin-right: 5px;
+  margin-right: 10px;
 }
