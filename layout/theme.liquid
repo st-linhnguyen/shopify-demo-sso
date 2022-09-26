@@ -290,6 +290,7 @@
     </script>
 
     {%- if settings.predictive_search_enabled -%}
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'facebook-login.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
