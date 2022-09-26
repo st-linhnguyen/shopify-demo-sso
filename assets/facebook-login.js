@@ -26,8 +26,8 @@ function checkLoginState(isClicked = false) {
     if (isClicked) {
       statusChangeCallback(response);
     } else {
-      fbApiInit = true;
-      console.log(111, fbApiInit);
+      this.fbApiInit = true;
+      console.log(111, this.fbApiInit);
     }
   });
 }
