@@ -44,6 +44,6 @@ window.fbAsyncInit = function() {
 document.addEventListener('DOMContentLoaded', () => {
   const buttonFB = document.getElementsByClassName('sso-login-facebook')[0];
   buttonFB.addEventListener('click', () => {
-    checkLoginState();
+    checkLoginState(true);
   });
 });
