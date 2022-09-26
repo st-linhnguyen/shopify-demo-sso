@@ -25,17 +25,16 @@ function checkLoginState() {
 
 window.fbAsyncInit = function() {
   FB.init({
-    appId      : '833394284494920',
-    cookie     : true,
-    xfbml      : true,
-    version    : 'v15.0'
+    appId: '833394284494920',
+    cookie: true,
+    xfbml: true,
+    version: 'v15.0'
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const buttonFB = document.getElementsByClassName('sso-login-facebook')[0];
   buttonFB.addEventListener('click', () => {
-    console.log(123123);
     checkLoginState();
   });
 });
