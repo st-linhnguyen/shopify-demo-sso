@@ -35,18 +35,12 @@ window.fbAsyncInit = function() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
+}
 
+document.addEventListener('DOMContentLoaded', () => {
   const buttonFB = document.getElementsByClassName('sso-login-facebook')[0];
   buttonFB.addEventListener('click', () => {
     console.log(123123);
     checkLoginState();
   });
-}
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const buttonFB = document.getElementsByClassName('sso-login-facebook')[0];
-//   buttonFB.addEventListener('click', () => {
-//     console.log(123123);
-//     checkLoginState();
-//   });
-// });
+});
