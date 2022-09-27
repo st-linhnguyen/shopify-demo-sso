@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }).then(() => {
       if (!liff.isLoggedIn()) {
         liff.login();
+      } else {
+        console.log('Token: ', liff.getAccessToken());
+        liff.getProfile().then(profile => {
+          console.log('Profile: ', profile);
+        }).catch(err => {
+          console.log('Failed to get profile');
+        });
       }
-      console.log('Token: ', liff.getAccessToken());
-      liff.getProfile().then(profile => {
-        console.log('Profile: ', profile);
-      }).catch(err => {
-        console.log('Failed to get profile');
-      })
     }).catch(err => {
       throw err;
     });
