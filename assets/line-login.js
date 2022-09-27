@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     liff.init({
       liffId: '1657505755-gjVkWB4b'
     }).then(() => {
-      setIsLoggedInState(liff.isLoggedIn());
       if (!liff.isLoggedIn()) {
         liff.login();
       }
